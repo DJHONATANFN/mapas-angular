@@ -1,0 +1,12 @@
+<div id="map" #map></div>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let colormarket of markets; let i=index"
+    [ngStyle]="{backgroundColor:colormarket.color }" (dblclick)="deleteMarket(i)" (click)="flyTo(colormarket.market)">
+    Marcador {{i+1}}
+  </li>
+</ul>
+
+<button class="btn btn-primary" (click)="createMarket()">
+  Agregar Marcador
+</button>
